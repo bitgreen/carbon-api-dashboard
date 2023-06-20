@@ -1,0 +1,222 @@
+[
+    {
+      "country": "Singapore",
+      "energyMix": 0.0019
+    },
+    {
+      "country": "France",
+      "energyMix": 0.4966
+    },
+    {
+      "country": "Germany",
+      "energyMix": 0.2192
+    },
+    {
+      "country": "Finland",
+      "energyMix": 0.4843
+    },
+    {
+      "country": "Ireland",
+      "energyMix": 0.1673
+    },
+    {
+      "country": "United States of America",
+      "energyMix": 0.1813
+    },
+    {
+      "country": "Japan",
+      "energyMix": 0.1321
+    },
+    {
+      "country": "French Polynesia",
+      "energyMix": 0.6930
+    },
+    {
+      "country": "Netherlands",
+      "energyMix": 0.1119
+    },
+    {
+      "country": "Spain",
+      "energyMix": 0.3083
+    },
+    {
+      "country": "Canada",
+      "energyMix": 0.3550
+    },
+    {
+      "country": "Switzerland",
+      "energyMix": 0.5195
+    },
+    {
+      "country": "China",
+      "energyMix": 0.1657
+    },
+    {
+      "country": "Slovenia",
+      "energyMix": 0.3794
+    },
+    {
+      "country": "United Kingdom",
+      "energyMix": 0.2021
+    },
+    {
+      "country": "Turkey",
+      "energyMix": 0.1502
+    },
+    {
+      "country": "South Korea",
+      "energyMix": 0.1426
+    },
+    {
+      "country": "Mexico",
+      "energyMix": 0.1153
+    },
+    {
+      "country": "Sweden",
+      "energyMix": 0.7058
+    },
+    {
+      "country": "Belgium",
+      "energyMix": 0.2504
+    },
+    {
+      "country": "Czech Republic",
+      "energyMix": 0.2130
+    },
+    {
+      "country": "Malaysia",
+      "energyMix": 0.0783
+    },
+    {
+      "country": "Poland",
+      "energyMix": 0.0650
+    },
+    {
+      "country": "Slovakia",
+      "energyMix": 0.2856
+    },
+    {
+      "country": "Taiwan",
+      "energyMix": 0.0780
+    },
+    {
+      "country": "Indonesia",
+      "energyMix": 0.0812
+    },
+    {
+      "country": "Lithuania",
+      "energyMix": 0.0806
+    },
+    {
+      "country": "Ukraine",
+      "energyMix": 0.2936
+    },
+    {
+      "country": "Italy",
+      "energyMix": 0.1586
+    },
+    {
+      "country": "Russia",
+      "energyMix": 0.1304
+    },
+    {
+      "country": "Australia",
+      "energyMix": 0.1253
+    },
+    {
+      "country": "India",
+      "energyMix": 0.0972
+    },
+    {
+      "country": "New Zealand",
+      "energyMix": 0.3638
+    },
+    {
+      "country": "Portugal",
+      "energyMix": 0.3059
+    },
+    {
+      "country": "Brazil",
+      "energyMix": 0.4539
+    },
+    {
+      "country": "Romania",
+      "energyMix": 0.2472
+    },
+    {
+      "country": "Israel",
+      "energyMix": 0.0497
+    },
+    {
+      "country": "Argentina",
+      "energyMix": 0.1376
+    },
+    {
+      "country": "Austria",
+      "energyMix": 0.3599
+    },
+    {
+      "country": "Hong Kong S.A.R.",
+      "energyMix": 0.04
+    },
+    {
+      "country": "Latvia",
+      "energyMix": 0.2094
+    },
+    {
+      "country": "Bulgaria",
+      "energyMix": 0.2972
+    },
+    {
+      "country": "Malta",
+      "energyMix": 0
+    },
+    {
+      "country": "South Africa",
+      "energyMix": 0.0524
+    },
+    {
+      "country": "Moldova",
+      "energyMix": 0
+    },
+    {
+      "country": "Vietnam",
+      "energyMix": 0.2271
+    },
+    {
+      "country": "Morocco",
+      "energyMix": 0.0764
+    },
+    {
+      "country": "Puerto Rico",
+      "energyMix": 0
+    },
+    {
+      "country": "Chile",
+      "energyMix": 0.2349
+    },
+    {
+      "country": "Denmark",
+      "energyMix": 0.3292
+    },
+    {
+      "country": "Colombia",
+      "energyMix": 0.3224
+    },
+    {
+      "country": "Pakistan",
+      "energyMix": 0.1422
+    },
+    {
+      "country": "United Arab Emirates",
+      "energyMix": 0.0318
+    },
+    {
+      "country": "Algeria",
+      "energyMix": 0.0026
+    },
+    {
+      "country": "undefined",
+      "energyMix": 0.17398378390094218
+    }
+   ]

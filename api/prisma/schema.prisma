@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Node {
+    id                      Int         @id @default(autoincrement())
+    name                    String
+    type                    NodeType    @default(Node)
+    networkId               Int         @default(1)
+    network                 Network     @relation(name: "nodeNetwork", fields: [networkId], references: [id])
+    latitude                Float?
+    longitude               Float?
+    city                    String?
+    periodFirstSeenId       Int         @default(0)
+    periodFirstSeen         Period      @relation(name: "nodeFirstSeen", fields: [periodFirstSeenId], references: [id])
+    periodLastSeenId        Int         @default(0)
+    periodLastSeen          Period      @relation(name: "nodeLastSeen", fields: [periodLastSeenId], references: [id])
+    periods                 NodesOnPeriods[]
+    dayReports              NodesOnDayReports[]
+
+    @@unique(name: "uniqueId", [name, type, networkId, latitude, longitude])
+}
+
+model Period {
+    id              Int         @id @default(autoincrement())
+    start           DateTime
+    end             DateTime
+    seenNodes       NodesOnPeriods[]
+
+    nodeFirstSeen   Node[]      @relation(name: "nodeFirstSeen")
+    nodeLastSeen    Node[]      @relation(name: "nodeLastSeen")
+
+    @@unique(name: "uniqueId", [start, end])
+}
+
+model NodesOnPeriods {
+    node        Node    @relation(fields: [nodeId], references: [id])
+    nodeId      Int
+    period      Period  @relation(fields: [periodId], references: [id])
+    periodId    Int
+
+    @@unique(name: "uniqueId", [nodeId, periodId])
+}
+
+model DayReport {
+    id          Int         @id @default(autoincrement())
+    day         DateTime    @unique
+
+    seenNodes   NodesOnDayReports[]
+}
+
+model NodesOnDayReports {
+    node            Node        @relation(fields: [nodeId], references: [id])
+    nodeId          Int
+    dayReport       DayReport   @relation(fields: [dayReportId], references: [id])
+    dayReportId     Int
+
+    @@unique(name: "uniqueId", [nodeId, dayReportId])
+}
+
+model Network {
+    id              Int         @id @default(autoincrement())
+    name            String      @unique
+    parentNetworkId Int?
+    parentNetwork   Network?    @relation(name: "parentNetwork", fields: [parentNetworkId], references: [id])
+    childNetworks   Network[]   @relation(name: "parentNetwork")
+    hash            String      @unique
+    nodes           Node[]      @relation(name: "nodeNetwork")
+}
+
+enum NodeType {
+  Validator
+  Collator
+  Node
+}

@@ -1,0 +1,476 @@
+.container {
+}
+
+.contentCard{
+  padding: 48px 64px;
+  background-color: #051C00 !important;
+  color: white !important;
+  border-radius: 2pc;
+  
+}
+.valuesCard{
+  /*
+  padding: 2rem 2rem;
+  background-color: black;
+  
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  */
+  background-color: #051C00 !important;
+  color: white !important;
+  max-width: 100%;
+  box-shadow: none !important;
+}
+
+.linkCard{
+  padding: 0.25rem 1rem;
+  background-color: black;
+  ;
+  color: white;
+  border-radius: 1pc;
+}
+
+.serverCard{
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  background-color: #051C00 !important;
+  color: white !important;
+  border-radius: 2pc;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: #051C00 !important;
+  flex: 1;
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  /*display: flex;
+  flex: 1;
+  */
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #224851;
+}
+.polkadot {
+  display: block !important;
+  text-align: left;
+}
+.link {
+  display: block !important;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.header {
+  padding: 1rem;
+  background-color: #051C00 !important;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3 !important;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+  margin: 0;
+  text-align: center;
+  margin: 2rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+.descriptionBox {
+  max-width: 250px;
+   color: #CECECE !important;
+   padding-bottom: 40px;
+}
+.descriptionTop {
+   color: #CECECE !important;
+}
+
+.code {
+  background-color: #fafafa !important;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea !important;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #C0FF00 !important;
+  border-color: #C0FF00 !important;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.header {
+  color: #eaeaea !important;
+}
+
+.divider {
+  background-color: #051C00 !important;
+  margin:3rem 0;
+}
+
+.unitText {
+  color: #A6CC2E !important;
+}
+
+.inputText{
+  color: lightgray !important;
+}
+
+.tabButton {
+  color: white !important;
+}
+
+.optionButton {
+  background-color: black !important;
+  color: white !important;
+  margin: 4px
+}
+
+.textBox {
+  background-color: #2f3033 !important;
+  border-color: #eaeaea !important;
+  color: #eaeaea !important;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.customTooltip {
+  padding: 5px 10px;
+  background-color: #2f3033 !important;
+  border-radius: 0.8pc;
+  color: white !important;
+}
+
+.label {
+  color: #A6CC2E !important;
+  font-weight: 600;
+}
+
+.progressBar {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #222 !important;
+}
+
+.linegraph {
+  width: 600px;
+  height: 300px;
+}
+
+.bargraph {
+  width: 600px;
+  height: 300px;
+}
+
+.parachainCard {
+  padding: 2rem 2rem;
+  margin: 1rem 1rem;
+  background-color: #051C00 !important;
+  color: white !important;
+  border-radius: 2pc;
+}
+
+.graph {
+  display: flex;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.grid {
+  display: flex;
+}
+
+.renewableLabel {
+  font-weight: 600;
+}
+
+.renewableProgress {
+  font-weight: 500;
+}
+
+.powerProgress {
+  font-weight: 100;
+}
+
+.infoText {
+  padding: 5px;
+  line-height: 18px;
+}
+
+.metricTitle {
+  font-size: 16pt;
+  line-height: 20px;
+}
+
+.metricData {
+  font-size: 48pt;
+  padding: 14px 0;
+  margin: 18px;
+}
+
+.metricBox {
+  margin-top: 70px;
+}
+
+.metricDivider {
+  background-color: #263300 !important;
+  ;
+}
+
+.geographicButton:hover,
+.geographicButton:focus,
+.geographicButton:active {
+  color: #9ECC00 !important;
+  border-color: #9ECC00 !important;
+}
+
+.sectionTitle {
+  margin-bottom: 0px;
+}
+
+.metricGridLeft {
+  margin-left: 70px;
+}
+.metricGridRight {
+  margin-right: 70px;
+}
+
+.accordion {
+  color: white !important;
+  background-color:#051C00 !important;
+  padding: 14px 0;
+}
+
+.accordionHeading {
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+.accordionIcon {
+  color: white !important;
+}
+
+.faqDivider {
+  background-color: white !important;
+}
+
+.subDescription {
+  color: #CECECE !important;
+  text-align: center;
+}
+
+.invertLogo {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.footerText {
+  font-weight: 00;
+  font-size: 20px;
+  color: black !important;
+  margin: 0
+}
+
+.footerLink {
+  color: #9ECC00 !important;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.graphLabel {
+  fill: #eaeaea !important;
+}
+
+.renewablesToggle {
+  background-color: #2f3033 !important;
+  border-color: #eaeaea !important;
+  color: #eaeaea !important;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.renewablesToggleButton {
+  color: #eaeaea !important;
+}
+.renewablesToggleButton:hover,
+.renewablesToggleButton:focus,
+.renewablesToggleButton:active {
+  color: #9ECC00 !important;
+}
+
+.menu {
+  background-color: #051C00 !important;
+}
+.menuItem {
+  color: white !important;
+}
+.menuItem:hover {
+  color: #9ECC00 !important;
+}
+
+.menuItemIcon {
+  color: white !important;
+}
+
+  .barContainer {
+    display: flex;
+  }
+
+  .tooltip {
+        color: white !important;
+        background-color: #051C00 !important;
+        padding: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.25px;
+  }
+
+  .tooltipCard {
+    padding: 15px;
+  background-color: #2f3033 !important;
+  border-radius: 0.8pc;
+  color: white !important;
+  
+  position: absolute;
+  right: 1%;
+  top: 60%;
+  
+  width: 400px;
+  justify-content: center;
+}
+
+.tooltipTitle {
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #A6CC2E !important;
+}
+
+.tooltipText {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .contentCard {
+    padding: 1rem 1rem;
+    margin: 0rem 0rem;
+    width: 100%;
+  }
+  .valuesCard {
+    padding: 1.5rem 0.5rem;
+    margin: 1rem 0rem;
+  }
+  .unitGrid {
+    width: 100%;
+  }
+  .parachainCard {
+    width: 300px;
+  }
+  .container {
+    padding: 0;
+  }
+  .metricGridLeft {
+    margin-left: 0px;
+  }
+  .metricGridRight {
+    margin-right: 0px;
+  }
+  .metricData {
+    font-size: 48pt;
+    padding: 14px 0;
+    margin: 18px 4px;
+  }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  .body{
+    background-color: #051C00 !important;
+  }
+  .card,
+  .footer {
+    border-color: #222 !important;
+  }
+  .code {
+    background-color: #051C00 !important;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}

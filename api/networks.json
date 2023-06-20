@@ -1,0 +1,710 @@
+{
+  "POLKADOT": {
+    "hash": "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
+    "parachains": {
+      "COLLECTIVES": {
+        "hash": ""
+      },
+      "ACALA": {
+        "hash": [
+          "0xfc41b9bd8ef8fe53d58c7ea67c794c7ec9a73daf05e6d54b14ff6342c99ba64c",
+          "0x0a1ac65e36435114b84faf039ff3c3e2582b61763b8483037573897a9effc89a",
+          "0x23fc729c2cdb7bd6770a4e8c58748387cc715fcf338f1f74a16833d90383f4b0"
+        ]
+      },
+      "AJUNA": {
+        "hash": ""
+      },
+      "ASTAR": {
+        "hash": "0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6"
+      },
+      "AVENTUS": {
+        "hash": ""
+      },
+      "BIFROST": {
+        "hash": [
+          "0x262e1b2ad728475fd6fe88e62d34c200abe6fd693931ddad144059b1eb884e5b",
+          "0x9f28c6a68e0fc9646eff64935684f6eeeece527e37bbe1f213d22caa1d9d6bed",
+          "0x7113cc8622c56f95e90a3e9f1c7840fe93f170f6600a7fe0051b35c9ff8c5723",
+          "0xbf92c5d95605bbca7ad9ce8a61da8c8cc135ed4a88bee1849a31fb2e313b9e57"
+        ]
+      },
+      "CENTRIFUGE": {
+        "hash": [
+          "0xb3db41421702df9a7fcac62b53ffeac85f7853cc4e689e0b93aeb3db18c09d82",
+          "0xe0ba4c15abb5a724865b2bcccfcbd17aee36a3ca192a8fe0cce7671b68f9fd3d",
+          "0x67dddf2673b69e5f875f6f25277495834398eafd67f492e09f3f3345e003d1b5",
+          "0x092af6e7d25178ebab1677d15f66e37b30392b44ef442f728a53dd1bf48ec110"
+        ]
+      },
+      "CLOVER": {
+        "hash": [
+          "0xdd97e5ad3f0015f2dc45c9467b0fd36a2b7f4b9a7bc65e8111d49d6cf19c8927",
+          "0x7b0f142a9299b0886595992f8cac58814c8956de6a31c77caca95db01370fc2c",
+          "0xe923f1773f4197a862cb4fc4a562f93585b26131dadbc943d524a82bbeecd2eb"
+        ]
+      },
+      "COINVERSATION": {
+        "hash": ""
+      },
+      "COMPOSABLE": {
+        "hash": "0xdaab8df776eb52ec604a5df5d388bb62a050a0aaec4556a64265b9d42755552d"
+      },
+      "CRUST": {
+        "hash": [
+          "0x8b404e7ed8789d813982b9cb4c8b664c05b3fbf433309f603af014ec9ce56a8c",
+          "0xb19e8874eb2013dc100534fafa322e105eea53c0aa02cd17cf94a2df35fbd41f",
+          "0x0e060cc7744159fa1642f61f71ea632a4ba3627f6d54ec2a5d6fc2b1c89fdc0e"
+        ]
+      },
+      "DARWINIA": {
+        "hash": [
+          "0x729cb8f2cf428adcf81fe69610edda32c5711b2ff17de747e8604a3587021db8",
+          "0xe71578b37a7c799b0ab4ee87ffa6f059a6b98f71f06fb8c84a8d88013a548ad6",
+          "0x34f61bfda344b3fad3c3e38832a91448b3c613b199eb23e5110a635d71c13c65"
+        ]
+      },
+      "EFINITY": {
+        "hash": ""
+      },
+      "EQUILIBRIUM": {
+        "hash": [
+          "0x6f1a800de3daff7f5e037ddf66ab22ce03ab91874debeddb1086f5f7dbd48925",
+          "0x89d3ec46d2fb43ef5a9713833373d5ea666b092fa8fd68fbc34596036571b907"
+        ]
+      },
+      "HYDRADX": {
+        "hash": [
+          "0xafdc188f45c71dacbaa0b62e16a91f726c7b8699a9748cdf715459de6b7f366d",
+          "0x0ed32bfcab4a83517fac88f2aa7cbc2f88d3ab93be9a12b6188a036bf8a943c2",
+          "0x5feea83342ce43200cb12b265cf21dc4e0e603571e2ac237e74ef45fb6913f52",
+          "0xd2a620c27ec5cbc5621ff9a522689895074f7cca0d08e7134a7804e1a3ba86fc"
+        ]
+      },
+      "INTEGRITEE": {
+        "hash": ""
+      },
+      "INTERLAY": {
+        "hash": ""
+      },
+      "KILT": {
+        "hash": ""
+      },
+      "KYLIN": {
+        "hash": "0xf2584690455deda322214e97edfffaf4c1233b6e4625e39478496b3e2f5a44c5"
+      },
+      "LITENTRY": {
+        "hash": [
+          "0x2fc8bb6ed7c0051bdcf4866c322ed32b6276572713607e3297ccf411b8f14aa9",
+          "0x6940b1852737722c0aa768710e20105ab8c6a80b63a0339cb99892ffdce38283",
+          "0x7113e7b7a52cb0c315d5d042fe2b875806b6f1dfb6f1561db9b49a989aa21384",
+          "0xa63c6f038dd25ca42c70048927f31b690afc3da695a76695829746562af1d407",
+          "0x4decfd421755d9008781d00ce40ea4cf47ec24a3717a34ca995126fc4a78c4f8"
+        ]
+      },
+      "MOONBEAM": {
+        "hash": "0xfe58ea77779b7abda7da4ec526d14db9b1e9cd40a217c34892af80a9b332b76d"
+      },
+      "NODLE": {
+        "hash": "0x97da7ede98d7bad4e36b4d734b6055425a3be036da2a332ea5a7037656427a21"
+      },
+      "OAK": {
+        "hash": ""
+      },
+      "ORIGINTRAIL": {
+        "hash": ""
+      },
+      "PARALLEL": {
+        "hash": [
+          "0xe61a41c53f5dcd0beb09df93b34402aada44cb05117b71059cce40a2723a4e97",
+          "0x64a1c658a48b2e70a7fb1ad4c39eea35022568c20fc44a6e2e3d0a57aee6053b"
+        ]
+      },
+      "PHALA": {
+        "hash": "0x1bb969d85965e4bb5a651abbedf21a54b6b31a21f66b5401cc3f1e286268d736"
+      },
+      "POLKADEX": {
+        "hash": [
+          "0x3920bcb4960a1eef5580cd5367ff3f430eef052774f78468852f7b9cb39f8a3c",
+          "0xc161e161edd329acddcaa9c1919a8762b7473146932ed3aa2e0fe4fb2555e76a",
+          "0x4653ecaf1bf30f39594d384e373ff4d663922573a3c43264e959e8a170e8f69b",
+          "0x83f72be55f170b0a192db95a5d3532ef7b418b581ed680617bc177601de4f896"
+        ]
+      },
+      "TOTEM": {
+        "hash": ""
+      },
+      "UNIQUE": {
+        "hash": ""
+      },
+      "WATR": {
+        "hash": ""
+      },
+      "BITGREEN": {
+        "hash": [
+          "0xa7fccb184338315b4d1565939215a7dabd784f87ff54625f6800d623e443c3b4"
+        ]
+      },
+      "OMNIBTC": {
+        "hash": ""
+      },
+      "APRON": {
+        "hash": ""
+      },
+      "ARES": {
+        "hash": ""
+      },
+      "BITCOUNTRYCONTINUUM": {
+        "hash": "0xfff6fd94251f570d4c9cdf25a0475da0d7ad35160290da19dad8f9caf8bf31b5"
+      },
+      "DATAHIGHWAY": {
+        "hash": [
+          "0xeacdd2d5b42de9769ccbb6e8d9013ab0d90ab105bf601d4aac53e874c145ec21",
+          "0xefaae77940276b0d18b6407e74f2c262a9dfcf6fef182bfa908a7a4f146b5c1f",
+          "0x0de0a89ed876a49e290556deed89e6731b7bc4f4f438b37b3cce313b9ffca7c2",
+          "0x30cd081cea63d489ae8c9ccd46603cd905c856108bd83b5499919f0b908e02e0",
+          "0x00fe1f7892a7e5aec539c2eb312a6d66f9d54644b3ffe948ebe3ba576eaeabde"
+        ]
+      },
+      "DICO": {
+        "hash": ""
+      },
+      "DIORA": {
+        "hash": ""
+      },
+      "FREQUENCY": {
+        "hash": "0x4a587bf17a404e3572747add7aab7bbe56e805a5479c6c436f07f36fcc8d3ae1"
+      },
+      "GAFI": {
+        "hash": ""
+      },
+      "GEMINIS": {
+        "hash": ""
+      },
+      "IDAVOLL": {
+        "hash": ""
+      },
+      "INVARCH": {
+        "hash": [
+          "0xd42e9606a995dfe433dc7955dc2a70f495f350f373daa200098ae84437816ad2",
+          "0x0d1fddd347c6f2522feaf48e3df6a9b343632869608340d7b9e2302fd8eba732"
+        ]
+      },
+      "KONOMI": {
+        "hash": ""
+      },
+      "LAMINAR": {
+        "hash": ""
+      },
+      "MANTA": {
+        "hash": ""
+      },
+      "MATH": {
+        "hash": "0xc05a7bae6228fec16454c076a38db66ab74a92b03e51f2c832fec26b22167c06"
+      },
+      "PATRACT": {
+        "hash": ""
+      },
+      "POLKAFOUNDRY": {
+        "hash": ""
+      },
+      "SHADOWS": {
+        "hash": ""
+      },
+      "STANDARD": {
+        "hash": ""
+      },
+      "SUBDAO": {
+        "hash": ""
+      },
+      "SUBGAME": {
+        "hash": ""
+      },
+      "SUBSPACE": {
+        "hash": [
+          "0x43d10ffd50990380ffe6c9392145431d630ae67e89dbc9c014cac2a417759101",
+          "0x9ee86eefc3cc61c71a7751bba7f25e442da2512f408e6286153b3ccc055dccf0",
+          "0x332ef6e751e25426e38996c51299dfc53bcd56f40b53dce2b2fc8442ae9c4a74",
+          "0x32a9c94b07c4d214fee98cbfbaa4d60a2f98c56c6cb3f08314b252c7f9c4bba0",
+          "0xa44d711a717f358a5d78dfd5e5a1032063f498cc30fbe8698a51e46f5ac1d9af",
+          "0x8e975582755f7fd4c125e64a51bafadca9dfaf18b0183ac19bc589d36d44aeed"
+        ]
+      },
+      "T3RN": {
+        "hash": ""
+      },
+      "TERNOA": {
+        "hash": [
+          "0xd9adfc7ea82be63ba28088d62b96e9270ad2af25c962afc393361909670835b2",
+          "0x6859c81ca95ef624c9dfe4dc6e3381c33e5d6509e35e147092bfbc780f777c4e",
+          "0x18bcdb75a0bba577b084878db2dc2546eb21504eaad4b564bb7d47f9d02b6ace"
+        ]
+      },
+      "UNIARTS": {
+        "hash": [
+          "0xbc20e8f3a4a9340f31bcf5be6288a98e064d84f67a94e41ed9e65d10e15e0077",
+          "0x55940785b92be6342ba1007488a3f46fdbef213cd1b412d35236b03528079aaa"
+        ]
+      },
+      "UNIT": {
+        "hash": "0xae07678c33afdebc4ebabf00cd3ba99faa570b43e4f928651a218e5c2d7a8143"
+      },
+      "ZERO": {
+        "hash": "0xa2a5f57ee48effcf4d09e247e1fa58080166d02cd6078a0206484bf3ac52b311"
+      },
+      "AKROPOLIS": {
+        "hash": ""
+      },
+      "BANDOT": {
+        "hash": ""
+      },
+      "BESTAY": {
+        "hash": ""
+      },
+      "BITTENSOR": {
+        "hash": ""
+      },
+      "BLUZELLE": {
+        "hash": ""
+      },
+      "CAELUM": {
+        "hash": ""
+      },
+      "CAP9": {
+        "hash": ""
+      },
+      "CDOT": {
+        "hash": ""
+      },
+      "CELER": {
+        "hash": ""
+      },
+      "CERE": {
+        "hash": [
+          "0x81443836a9a24caaa23f1241897d1235717535711d1d3fe24eae4fdc942c092c",
+          "0x42b9b44b4950b6c1edae543a7696caf8d0a160e9bc0424ab4ab217f7a8ba30dc",
+          "0xad80035abddd500a048010a912e53e701c20412ae9f42761f3f55a3313f0f53d",
+          "0xc9dd9394ab115faebf219c36ad1d63e42e996d0cb01dc350fea97cbb9471fc94",
+          "0xc0e50fc199afd33bfccd5008135b94a75b810a5ed6d95047c0532614e38d593a",
+          "0x9b8126b782c6fd05499e21b04724cfe58a0280d1a3825aa9165999d91b423545"
+        ]
+      },
+      "CHAINLINK": {
+        "hash": ""
+      },
+      "CHAINX": {
+        "hash": [
+          "0x012cfb6997279fed8ff754a5a90cb30627c70fcdd79ee9c480bcef07de754810",
+          "0x6ac13efb5b368b97b4934cef6edfdd99c2af51ba5109bfb8dacc116f9c584c10",
+          "0x3a10a25727b09cf04a9d143c3ebefb179c3c45613297339d3cbec4e5d4c75242"
+        ]
+      },
+      "COMPOUND": {
+        "hash": ""
+      },
+      "COVERCOMPARED": {
+        "hash": ""
+      },
+      "DATDOT": {
+        "hash": ""
+      },
+      "DEEPER": {
+        "hash": "0x4466b9e982ab141d4115ed226ff4153b1d20e5b64f5401f732e60dec8326149f"
+      },
+      "DEFINEX": {
+        "hash": ""
+      },
+      "DEGO": {
+        "hash": ""
+      },
+      "DIPOLE": {
+        "hash": ""
+      },
+      "DOCK": {
+        "hash": "0x6bfe24dca2a3be10f22212678ac13a6446ec764103c0f3471c71609eac384aae"
+      },
+      "DOTMOG": {
+        "hash": "0xe7dd4d1b7c13c142b715617b4e21cd1e259639c5f6832fdf0a9affd5ab9fb15d"
+      },
+      "EDGEWARE": {
+        "hash": "0x742a2ca70c2fda6cee4f8df98d64c4c670a052d9568058982dad9d5a7a135c5b"
+      },
+      "ENERGYWEB": {
+        "hash": ""
+      },
+      "ETHALEND": {
+        "hash": ""
+      },
+      "EVERCITY": {
+        "hash": ""
+      },
+      "EVERYLIFE": {
+        "hash": ""
+      },
+      "EXEEDME": {
+        "hash": ""
+      },
+      "FORJ": {
+        "hash": ""
+      },
+      "FRACTAL": {
+        "hash": ""
+      },
+      "GAMEDAO": {
+        "hash": ""
+      },
+      "GEAR": {
+        "hash": ""
+      },
+      "HAZEL": {
+        "hash": ""
+      },
+      "JOYSTREAM": {
+        "hash": [
+          "0xe80a8b38f1ae7c37a5caf3771ae38de45d7dcd9e6ea410e78a0ef9a2ba4f49ba",
+          "0xd1530b45bb02d438ddb7304f5b45350b0e06f2ff1385be34585e3586964c6b6f",
+          "0x00add825e55ed90617534c0985f626504bb46a4684f442990ca644299e1571a4",
+          "0xabf929bb2e7d75083f6f7b5f5ad3dd6ef94cab0c1db12cc1a0a4ddccf76c18a9",
+          "0x447ee782b551747c4459045d3843a7254eb1bfd50faf7e3906a61140fb999c29",
+          "0x94bdb2ec0f0e57211303a30dcc2314f1cd60435a8f2bf05991a62393ebf9def4",
+          "0x6b9847d615232517b5c2edf9889610557818f97126339b5beff6763eca55c606"
+        ]
+      },
+      "KULUPU": {
+        "hash": "0xf7a99d3cb92853d00d5275c971c132c074636256583fee53b3bbe60d7b8769ba"
+      },
+      "LAYERX": {
+        "hash": ""
+      },
+      "LINEAR": {
+        "hash": ""
+      },
+      "MANGATA": {
+        "hash": "0x38dc5009c246939b0856de75d4f1bad9d78ec9f651afe9928493708a405369b2"
+      },
+      "MANTRA": {
+        "hash": ""
+      },
+      "MXC": {
+        "hash": ""
+      },
+      "NSURE": {
+        "hash": ""
+      },
+      "OAX": {
+        "hash": ""
+      },
+      "OPENSQUARE": {
+        "hash": ""
+      },
+      "PARALINK": {
+        "hash": "0x85fc68995115f48931266e614b783dd020b9f26d05d9a65427173c362b239130"
+      },
+      "PEAQ": {
+        "hash": ""
+      },
+      "PANDULUM": {
+        "hash": ""
+      },
+      "POLIMEC": {
+        "hash": ""
+      },
+      "POLKABRIDGE": {
+        "hash": ""
+      },
+      "PULSE": {
+        "hash": ""
+      },
+      "RAI": {
+        "hash": ""
+      },
+      "REEF": {
+        "hash": [
+          "0x7834781d38e4798d548e34ec947d19deea29df148a7bf32484b7b24dacf8d4b7",
+          "0x0f89efd7bf650f2d521afef7456ed98dff138f54b5b7915cc9bce437ab728660"
+        ]
+      },
+      "RIODEFI": {
+        "hash": ""
+      },
+      "ROYALE": {
+        "hash": ""
+      },
+      "RUBY": {
+        "hash": ""
+      },
+      "SEALORACLE": {
+        "hash": ""
+      },
+      "SHIFT": {
+        "hash": ""
+      },
+      "SNOWFORK": {
+        "hash": ""
+      },
+      "SOCIETAL": {
+        "hash": ""
+      },
+      "STAFI": {
+        "hash": [
+          "0xd224dbf5b1c1a6d06aafb8f9b03719f1bb14da44a4bbca47019741ccd2fa475c",
+          "0x290a4149f09ea0e402c74c1c7e96ae4239588577fe78932f94f5404c68243d80",
+          "0xbc8521252333cd0914b51b13c476fcd54a4dff471c7fe3173a0172c2b6ec17cc",
+          "0xf5e102d0798e90ed38e7f5512d078d778a8507d7a18819878e4d100aba19d478",
+          "0xb2010cc3fc889c950b043da3aae60dcc338d7e57573ce1f9fa46e63337c5685b"
+        ]
+      },
+      "STONEDEFI": {
+        "hash": ""
+      },
+      "SUBQUERY": {
+        "hash": ""
+      },
+      "SUBSQUID": {
+        "hash": ""
+      },
+      "SUMMA": {
+        "hash": ""
+      },
+      "SUNRISE": {
+        "hash": ""
+      },
+      "TEA": {
+        "hash": ""
+      },
+      "TIDAL": {
+        "hash": ""
+      },
+      "WIV": {
+        "hash": ""
+      },
+      "XPREDICT": {
+        "hash": ""
+      },
+      "ZEROPOOL": {
+        "hash": ""
+      }
+    }
+  },
+  "KUSAMA": {
+    "hash": "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe",
+    "parachains": {
+      "STATEMINE": {
+        "hash": "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda771a"
+      },
+      "ALTAIR": {
+        "hash": "0xaa3876c1dc8a1afcc2e9a685a49ff7704cfd36ad8c90bf2702b9d1b00cc40011"
+      },
+      "AMPLITUDE": {
+        "hash": "0xcceae7f3b9947cdb67369c026ef78efa5f34a08fe5808d373c04421ecf4f1aaf"
+      },
+      "BAJUN": {
+        "hash": ""
+      },
+      "BASILISK": {
+        "hash": [
+          "0x2df0e221aae5112050de7e139877a84d71a2277ce30bfa88d006c58f0179483c",
+          "0xa85cfb9b9fd4d622a5b28289a02347af987d8f73fa3108450e2b4a11c1ce5755",
+          "0x193bee4a68226725037fe22c2f3db3c089ab8b09b97ecf9d5cb3979c55b1939b",
+          "0x317498e4a13cc902ee6b1886686101ac2dbc37a3bc1456f3ce7ee6d0efb45c50",
+          "0xd9e583a7c6a7dd8743589e734030695cbd6981210614dcc582db3105e82f4b05"
+        ]
+      },
+      "BIFROST": {
+        "hash": [
+          "0x9f28c6a68e0fc9646eff64935684f6eeeece527e37bbe1f213d22caa1d9d6bed",
+          "0x7113cc8622c56f95e90a3e9f1c7840fe93f170f6600a7fe0051b35c9ff8c5723",
+          "0xbf92c5d95605bbca7ad9ce8a61da8c8cc135ed4a88bee1849a31fb2e313b9e57"
+        ]
+      },
+      "BITCOUNTRY": {
+        "hash": "0xfff6fd94251f570d4c9cdf25a0475da0d7ad35160290da19dad8f9caf8bf31b5"
+      },
+      "CALAMARI": {
+        "hash": "0x4ac80c99289841dd946ef92765bf659a307d39189b3ce374a92b5f0415ee17a1"
+      },
+      "CRAB": {
+        "hash": "0xeac895d7768b17837a9c3a9f0280c01502c3ef40193df923490a0fa9c60ea076"
+      },
+      "CRUST": {
+        "hash": ""
+      },
+      "DAOIPCI": {
+        "hash": "0x7372b32137952f3047d30bfe1ffd240bc5e70f7a61d9a0cbf16e910dbb673f84"
+      },
+      "DORA": {
+        "hash": ""
+      },
+      "GENSHIRO": {
+        "hash": "0x9b8cefc0eb5c568b527998bdd76c184e2b76ae561be76e4667072230217ea243"
+      },
+      "GM": {
+        "hash": "0x19a3733beb9cb8a970a308d835599e9005e02dc007a35440e461a451466776f8"
+      },
+      "HEIKO": {
+        "hash": "0x64a1c658a48b2e70a7fb1ad4c39eea35022568c20fc44a6e2e3d0a57aee6053b"
+      },
+      "IMBUE": {
+        "hash": [
+          "0xca93a37c913a25fa8fdb33c7f738afc39379cb71d37874a16d4c091a5aef9f89",
+          "0x32ab6988b47cea6cb62c71ef6c9b783b2db861b5171211b2d165f71329aaa5aa"
+        ]
+      },
+      "INTEGRITEE": {
+        "hash": ""
+      },
+      "KABOCHA": {
+        "hash": [
+          "0xfeb426ca713f0f46c96465b8f039890370cf6bfd687c9076ea2843f58a6ae8a7",
+          "0xf8f5b0c4d5b4b4569e11ac4b251b08eb0ee51a6b3586b39fd0fc8bfae7e941a8",
+          "0x573897c9b9e820f8e5eb5360deacfff56c3515bdcdfffd8c3e0d3e05d782a7b0"
+        ]
+      },
+      "KARURA": {
+        "hash": "0xbaf5aabe40646d11f0ee8abbdc64f4a4b7674925cba08e4a05ff9ebed6e2126b"
+      },
+      "KHALA": {
+        "hash": "0xd43540ba6d3eb4897c28a77d48cb5b729fea37603cbbfc7a86a73b72adb3be8d"
+      },
+      "KICO": {
+        "hash": "0x52149c30c1eb11460dce6c08b73df8d53bb93b4a15d0a2e7fd5dafe86a73c0da"
+      },
+      "KILT": {
+        "hash": "0x411f057b9107718c9624d6aa4a3f23c1653898297f3d4d529d9bb6511a39dd21"
+      },
+      "KINTSUGI": {
+        "hash": "0x9af9a64e6e4da8e3073901c3ff0cc4c3aad9563786d89daf6ad820b6e14a0b8b"
+      },
+      "LISTEN": {
+        "hash": "0x48eb7f3fff34e702aa2b504674df8f8afbf9889f804e3088c0cb662e433552a0"
+      },
+      "LITMUS": {
+        "hash": "0xda5831fbc8570e3c6336d0d72b8c08f8738beefec812df21ef2afc2982ede09c"
+      },
+      "MANGATA": {
+        "hash": [
+          "0xd611f22d291c5b7b69f1e105cca03352984c344c4421977efaa4cbdd1834e2aa",
+          "0x38dc5009c246939b0856de75d4f1bad9d78ec9f651afe9928493708a405369b2"
+        ]
+      },
+      "MOONRIVER": {
+        "hash": "0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b"
+      },
+      "PICASSO": {
+        "hash": [
+          "0x6811a339673c9daa897944dcdac99c6e2939cc88245ed21951a0a3c9a2be75bc",
+          "0xe8e7f0f4c4f5a00720b4821dbfddefea7490bcf0b19009961cc46957984e2c1c"
+        ]
+      },
+      "PICHIU": {
+        "hash": "0x0e06260459b4f9034aba0a75108c08ed73ea51d2763562749b1d3600986c4ea5"
+      },
+      "QUARTZ": {
+        "hash": ""
+      },
+      "ROBONOMICS": {
+        "hash": [
+          "0xda478c63a5b6829afdfb0a21190697596c79ab45454d09abb1cb884842710f7d",
+          "0x631ccc82a078481584041656af292834e1ae6daab61d2875b4dd0c14bb9b17bc",
+          "0x57df7f778a4ad1e9654092a1025b5f92963e0c4a582e8141c493f8f74743ea77",
+          "0x078b9efe8ad770c993e6a7317dc6541ad58cb66c83361d6f5b1c5af083bda32e",
+          "0x3d2222a5b7df73e876fbb003007dd428758203b9a38c49f5ebeb5474cf7fd8ae"
+        ]
+      },
+      "SAKURA": {
+        "hash": "0x7b0f142a9299b0886595992f8cac58814c8956de6a31c77caca95db01370fc2c"
+      },
+      "SHIDEN": {
+        "hash": "0xf1cf9022c7ebb34b162d5b5e34e705a5a740b2d0ecc1009fb89023e62a488108"
+      },
+      "SNOW": {
+        "hash": "0xb34f6cd03a41f0fab38ba9fd5b11cce5f303633c46f39f0c6fdc7c3c602bafa9"
+      },
+      "SORA": {
+        "hash": [
+          "0x7e4e32d0feafd4f9c9414b0be86373f9a1efa904809b683453a9af6856d38ad5",
+          "0x3266816be9fa51b32cfea58d3e33ca77246bc9618595a4300e44c8856a8d8a17"
+        ]
+      },
+      "SUBSOCIAL": {
+        "hash": [
+          "0x0bd72c1c305172e1275278aaeb3f161e02eccb7a819e63f62d47bd53a28189f8",
+          "0xacb8cd9640561d5f740150622ac51429e67e18aad3abf695296e26afde841a81"
+        ]
+      },
+      "TANGANIKA": {
+        "hash": [
+          "0xeacdd2d5b42de9769ccbb6e8d9013ab0d90ab105bf601d4aac53e874c145ec21",
+          "0x00fe1f7892a7e5aec539c2eb312a6d66f9d54644b3ffe948ebe3ba576eaeabde"
+        ]
+      },
+      "TINKERNET": {
+        "hash": ""
+      },
+      "TURING": {
+        "hash": [
+          "0x0f62b701fb12d02237a33b84818c11f621653d2b1614c777973babf4652b535d",
+          "0xd54f0988402deb4548538626ce37e4a318441ea0529ca369400ebec4e04dfe4b"
+        ]
+      },
+      "ZEITGEIST": {
+        "hash": [
+          "0x1bf2a2ecb4a868de66ea8610f2ce7c8c43706561b6476031315f6640fe38e060",
+          "0xc910f04971debfd3acb7383cb800f08b05ef86dd028682d8a7504d272e7ebbb2",
+          "0x22a85a01ff5d04226efa44cb7cb3b100649bc0d5f992251aa00ff90d9a14af0e"
+        ]
+      },
+      "KPRON": {
+        "hash": ""
+      },
+      "LOOM": {
+        "hash": ""
+      },
+      "MARS": {
+        "hash": ""
+      },
+      "POLKASMITH": {
+        "hash": ""
+      },
+      "SHERPAX": {
+        "hash": "0xe195ef16d0c628b5cab1486a233865def6e71f8b7814dd058a6b93a85118b796"
+      },
+      "SUBGAMEGAMA": {
+        "hash": ""
+      },
+      "TRUSTBASE": {
+        "hash": ""
+      },
+      "UNORTHODOX": {
+        "hash": ""
+      },
+      "VALIU": {
+        "hash": ""
+      },
+      "ZCLOAK": {
+        "hash": ""
+      },
+      "ACUITY": {
+        "hash": "0xde04252745148abbd99d2f1d5aeed331e780926c82cbc3f093f45c90d3bedbc7"
+      },
+      "ACURAST": {
+        "hash": ""
+      },
+      "AUTOMATA": {
+        "hash": ""
+      },
+      "CURIO": {
+        "hash": [
+          "0x63df5b41cb28c2a9ba259bfb38ed62aa64524e786646c135c0685bd0839283fd",
+          "0x02cf205bca73bca60a964d867d8d8151ff1bfb30f94d99c4399f4779f9afcc4f"
+        ]
+      },
+      "MAP": {
+        "hash": ""
+      },
+      "MOMENTUM": {
+        "hash": ""
+      }
+    }
+  }
+}

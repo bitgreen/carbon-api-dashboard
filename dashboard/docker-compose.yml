@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 69542068ef65466a1c
+      POSTGRES_USER: offsetra
+      POSTGRES_DB: offsetra
+    ports: 
+    - 5433:5432
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "offsetra"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      
+  web: 
+    build: .
+    restart: always
+    ports: 
+    - 3000:3000
+    depends_on:
+      - db
+
+
+    

@@ -1,0 +1,2 @@
+0 0,6,12,18 * * * node --experimental-json-modules /usr/src/carbon-dashboard/scripts/createNetworkData.mjs
+

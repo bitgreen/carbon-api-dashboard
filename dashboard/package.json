@@ -1,0 +1,45 @@
+{
+  "name": "hello-next",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "db:push": "prisma db push --preview-feature"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
+    "@polkadot/api": "^9.2.4",
+    "@polkadot/extension-dapp": "^0.44.6",
+    "@prisma/client": "^4.4.0",
+    "country-locator": "^2.1.1",
+    "json2csv": "^5.0.7",
+    "next": "^12.3.2-canary.15",
+    "node-fetch": "^3.2.10",
+    "react": "17.0.2",
+    "react-cookie": "^4.1.1",
+    "react-country-region-selector": "^3.6.1",
+    "react-css-theme-switcher": "^0.3.0",
+    "react-dom": "17.0.2",
+    "react-markdown": "8.0.0",
+    "recharts": "2.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.14",
+    "@types/react": "17.0.38",
+    "prisma": "^4.3.0",
+    "typescript": "^4.8.3"
+  },
+  "engine": {
+    "npm": ">=7.0.0",
+    "node": ">=18.0.0"
+  }
+}

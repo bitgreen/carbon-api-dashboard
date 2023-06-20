@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model overviewdata {
+  id                 Int           @unique @default(autoincrement())
+  timestamp          DateTime      @unique
+  numberofnodes      Int
+  totalpower         Int
+  totalemissions     Int
+  percentres         Float
+  locations          Json
+  liveenergymix      Float
+  liveemissionfactor Float
+  networkdata        networkdata[]
+}
+
+model networkdata {
+  overviewdata   overviewdata     @relation(fields: [overviewid], references: [id])
+  overviewid     Int              @default(autoincrement())
+  networkid      Int              @unique @default(autoincrement())
+  timestamp      DateTime
+  name           String
+  numberofnodes  Int
+  totalpower     Int
+  totalemissions Int
+  percentres     Float
+  locations      Json
+  nodes          Json
+  subnetworkdata subnetworkdata[]
+}
+
+model subnetworkdata {
+  networkdata    networkdata @relation(fields: [networkid], references: [networkid])
+  overviewid     Int         @default(autoincrement())
+  networkid      Int         @default(autoincrement())
+  subnetworkid   Int         @default(autoincrement())
+  timestamp      DateTime
+  networkname    String
+  subnetworkname String
+  numberofnodes  Int
+  totalpower     Int
+  totalemissions Int
+  percentres     Float
+  dapps          Json
+
+  @@unique([subnetworkid, overviewid])
+}
+
+model parachains {
+  id         Int    @unique @default(autoincrement())
+  name       String @unique
+  address    String @unique
+  totalnodes Int
+  servers    Json
+  network    String
+  nonce      Int
+}
+
+model dapps {
+  name       String @unique
+  id         Int    @unique @default(autoincrement())
+  address    String @unique
+  totalnodes Int
+  servers    Json
+  parachain  String
+  nonce      Int
+}
