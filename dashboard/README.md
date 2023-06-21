@@ -47,8 +47,8 @@ database.
 The server will be reachable browsing http://localhost:3001  
 
 If you wish to reach the server from the public internet, please follow the Docker section in the [main README.md.](../README.md).
-For production with Docker, your should change the POSTGRES_PASSWORD in docker-compose.yml.  
 
+If you wish to use Docker for production enviromnent you should change the POSTGRES_PASSWORD: in the docker-compose.yml
   
 This is a [Next.js](https://nextjs.org/) project developed by [Offsetra](https://offsetra.com/).
 
