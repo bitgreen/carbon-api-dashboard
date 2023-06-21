@@ -37,6 +37,11 @@ Execute the install.sh:
 ./install.sh
 ```
 Check the result, you should have installed a valid TLS certificate from Letsencrypt.org.  
+You can wipe the certificates and private key with:  
+Execute the install.sh:  
+```bash
+./clean.sh
+```  
 For any issue the docker certbot will outout clear error messages and possible solutions.
 run the docker image for the reverse proxy with:
 ```bash
