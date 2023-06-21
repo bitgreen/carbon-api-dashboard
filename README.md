@@ -52,4 +52,10 @@ You should run the docker for the Dashboard and API and test them browsing to:
 https;//YOURDOMAIN/ for the dashboard.  
 https://YOURDOMAIN/api for the api.  
 
+To run all the docker images:  
+```bash
+./start-all.sh
+```
+
+
 
