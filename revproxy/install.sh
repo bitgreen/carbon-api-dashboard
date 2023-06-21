@@ -2,8 +2,8 @@
 # SCRIPT tO get a TLS certficate from letsencrypt.org. You should have a dns record pointing to the public 
 # ip address of this server.
 ## CHANGE THIS VARIABLES
-DOMAIN="test.bitgreen.org"
-EMAIL="samuele@bitgreen.org"
+DOMAIN="example.org"
+EMAIL="info@example.org"
 ## END CHANGES
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 LETSENCRYPT_VOLUME_DIR=$DIR/letsencrypt
