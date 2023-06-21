@@ -40,7 +40,15 @@ Install docker and docker composer from [https://www.docker.com](https://www.doc
 ### Build and Run  
 from the project folder execute:  
 ```
+# for development (the db will be wiped and some seed data will be loaded):   
+./setup-dev.sh  
+# for production: (the db is not loaded with seed data, please wait for a while to populate some records)  
+./setup-prod.sh
+# run docker in detached mode
 docker compose up -d
 ```
-A database with some seed data, the Api Server and the Fetcher Server will be
-deployed.  
+the Api Server and the Fetcher will be deployed.  
+
+If you wish to reach the server from the public internet, please follow the Docker section in the main README.md..
+
+To use Docker for production enviromnent you should change the POSTGRES_PASSWORD: in the docker-compose.yml
