@@ -16,7 +16,8 @@ Specific documentation is in  the [folder api](/api)
 You can run the Dashboard and the Api in Docker. 
 The Dashboard will be reachable on port 3000, for example with http://localhost:3000.  
 The API will be reachable on port 3001, for example with http://localhost:3001.  
-If you wish to use docker for production you should change the POSTGRES_PASSWORD: in the docker-compose.yml run a docker for a reverse proxy as follows:
+  
+If you wish to use docker for production you should change the POSTGRES_PASSWORD: in the docker-compose.yml and Run a docker for a reverse proxy as follows:  
 
 ## Reverse Proxy
 
@@ -24,7 +25,8 @@ If you wish to use docker for production you should change the POSTGRES_PASSWORD
 Docker, Docker Compose, Linux Os.
 
 - Installation:
-Point a sub or full domain name to the public ip adress of your server.
+Point a sub or full domain name to the public ip adress of your server.  
+  
 change folder to revproxy:  
 ```bash
 cd revproxy
