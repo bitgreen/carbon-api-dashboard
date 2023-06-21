@@ -29,8 +29,8 @@ change folder to revproxy:
 ```bash
 cd revproxy
 ```
-edit the file install.sh and change the value of DOMAIN and EMAIL to yours.
-execute the install.sh:
+edit the file install.sh and change the value of DOMAIN and EMAIL to yours.  
+Execute the install.sh:  
 ```bash
 ./install.sh
 ```
