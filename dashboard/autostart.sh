@@ -1,6 +1,6 @@
 #!/bin/bash 
-cd /usr/src/carbon-dashboard
+cd /usr/src/carbon-api-dashboard/dashboard
 npx prisma db push --accept-data-loss 
-node --experimental-json-modules /usr/src/carbon-dashboard/scripts/createNetworkData.mjs
-crontab </usr/src/carbon-dashboard/crontab.log
+node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs
+crontab /usr/src/carbon-api-dashboard/dashboard/crontab.log
 npm run dev

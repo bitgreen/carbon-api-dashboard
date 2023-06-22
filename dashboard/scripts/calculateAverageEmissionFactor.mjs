@@ -4,7 +4,7 @@ import countryEmissionFactors from "../data/countryEmissionFactors.json" assert 
 
 export default async function fetchNodeData() {
   try {
-    const response = await fetch(`https://dscfapi.bitgreenswiss.org/nodes`, {
+    const response = await fetch(`${process.env.CARBON_API}/nodes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });

@@ -23,7 +23,7 @@ const hardwarePower = {
 //Fetch network (POLKADOT, KUSAMA) data from bitgreen API
 async function fetchNodeData(name) {
   try {
-    const response = await fetch(`https://dscfapi.bitgreenswiss.org/nodes`, {
+    const response = await fetch(`${process.env.CARBON_API}/nodes`, {
       body: JSON.stringify({
         network: name,
         include_subnetworks: true
@@ -48,7 +48,7 @@ const fetchLatestSubnetworkId = async () => {
 async function fetchNetworks() {
   /*
   try {
-    const response = await fetch(`https://dscfapi.bitgreenswiss.org/networks`, {
+    const response = await fetch(`${process.env.CARBON_API}/networks`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });

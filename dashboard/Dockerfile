@@ -8,16 +8,18 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get -y install git cron 
 WORKDIR /usr/src/
-RUN git clone https://github.com/bitgreen/carbon-dashboard.git 
-WORKDIR /usr/src/carbon-dashboard
+RUN git clone https://github.com/bitgreen/carbon-api-dashboard.git
+WORKDIR /usr/src/carbon-api-dashboard/dashboard
 RUN npm install -g npm@9.7.1
 RUN /usr/bin/npm install
-COPY .env.Docker /usr/src/carbon-dashboard/.env
-COPY autostart.sh /usr/src/carbon-dashboard/autostart.sh
-RUN chmod a+x /usr/src/carbon-dashboard/autostart.sh
+COPY .env.Docker /usr/src/carbon-api-dashboard/dashboard/.env
+COPY autostart.sh /usr/src/carbon-api-dashboard/dashboard/autostart.sh
+RUN chmod a+x /usr/src/carbon-api-dashboard/dashboard/autostart.sh
 # final configuration
 EXPOSE 3000
-WORKDIR /usr/src/carbon-dashboard
-CMD "/usr/src/carbon-dashboard/autostart.sh"
+ENV DATABASE_URL="postgresql://offsetra:69542068ef65466a1c@db:5432/offsetra?schema=public"
+ENV CARBON_API="http://localhost:3001"
+WORKDIR /usr/src/carbon-api-dashboard/dashboard
+CMD "/usr/src/carbon-api-dashboard/dashboard/autostart.sh"
 
 

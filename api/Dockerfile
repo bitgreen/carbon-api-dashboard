@@ -10,18 +10,18 @@ RUN apt-get -y install git
 RUN apt-get -y install coreutils
 
 WORKDIR /usr/src/
-RUN git clone https://github.com/bitgreen/carbon-api.git 
-WORKDIR /usr/src/carbon-api
+RUN git clone https://github.com/bitgreen/carbon-api-dashboard.git
+WORKDIR /usr/src/carbon-api-dashboard/api
 RUN npm install -g npm@9.7.1
 RUN /usr/bin/npm install
-COPY .env.Docker /usr/src/carbon-api/.env
-COPY autostart.sh /usr/src/carbon-api/
-RUN chmod a+x /usr/src/carbon-api/autostart.sh
+COPY .env.Docker /usr/src/carbon-api-dashboard/api/.env
+COPY autostart.sh /usr/src/carbon-api-dashboard/api/
+RUN chmod a+x /usr/src/carbon-api-dashboard/api/autostart.sh
 # final configuration
 EXPOSE 3000
 EXPOSE 22
 ENV DATABASE_URL="postgresql://carbonapi:69542068ef65466a1c@db:5432/carbonapi?schema=public"
 ENV API_PORT=3000
 ENV TZ="UTC"
-CMD "/usr/src/carbon-api/autostart.sh"
+CMD "/usr/src/carbon-api-dashboard/api/autostart.sh"
 
