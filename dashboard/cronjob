@@ -1,2 +1,2 @@
-*/2 * * * * node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs >/proc/1/fd/1 2>/proc/1/fd/2 
+*/2 * * * * root node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs >/proc/1/fd/1 2>/proc/1/fd/2
 
