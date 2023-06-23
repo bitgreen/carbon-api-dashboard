@@ -212,7 +212,7 @@ app.post('/report/daily', async function (req, res) {
 });
 
 /* serve api */
-const server = app.listen(port, function () {
+const server = app.listen(port, '0.0.0.0', function () {
     console.log(`API server is listening at: http://localhost:${port}.`)
 });
 
