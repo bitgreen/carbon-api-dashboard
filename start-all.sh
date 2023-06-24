@@ -1,7 +1,5 @@
 #!/bin/bash
 cd revproxy
 docker-compose up -d
-cd ../api
-docker-compose up -d
-cd ../dashboard
+cd ..
 docker-compose up -d --build

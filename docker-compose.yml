@@ -1,0 +1,70 @@
+version: '3.1'
+
+services:
+  dashboard:
+    build: dashboard
+    command: ["./autostart.sh"]
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - dashboard-volume:/usr/src/carbon-api-dashboard/dashboard
+    depends_on:
+      - db_dashboard
+
+  cron:
+    build: dashboard
+    command: ["cron", "-f"]
+    volumes:
+      - dashboard-volume:/usr/src/carbon-api-dashboard/dashboard
+    depends_on:
+      - db_dashboard
+
+  db_dashboard:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 69542068ef65466a1c
+      POSTGRES_USER: offsetra
+      POSTGRES_DB: offsetra
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "offsetra"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db-dashboard-volume:/var/lib/postgresql/data
+    depends_on:
+      - api
+
+  api:
+    build: api
+    restart: always
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db_api
+
+  db_api:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 69542068ef65466a1c
+      POSTGRES_USER: carbonapi
+      POSTGRES_DB: carbonapi
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "carbonapi" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db-api-volume:/var/lib/postgresql/data
+
+volumes:
+  dashboard-volume:
+  db-dashboard-volume:
+  db-api-volume:
