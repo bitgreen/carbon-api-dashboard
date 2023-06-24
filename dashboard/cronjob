@@ -1,1 +1,1 @@
-*/1 * * * * root /usr/bin/node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs
+0 0,6,12,18 * * * root /usr/bin/node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs
