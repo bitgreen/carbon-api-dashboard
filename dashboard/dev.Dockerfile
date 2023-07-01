@@ -15,9 +15,8 @@ RUN /usr/bin/npm install
 
 # copy necessery files
 COPY .env.Docker /usr/src/carbon-api-dashboard/dashboard/.env
-COPY autostart.prod.sh /usr/src/carbon-api-dashboard/dashboard/autostart.sh
+COPY autostart.dev.sh /usr/src/carbon-api-dashboard/dashboard/autostart.sh
 RUN chmod a+x /usr/src/carbon-api-dashboard/dashboard/autostart.sh
-COPY dump.sql /usr/src/carbon-api-dashboard/dashboard/dump.sql
 
 # final configuration
 EXPOSE 3000

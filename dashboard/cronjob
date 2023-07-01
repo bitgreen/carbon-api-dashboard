@@ -1,1 +1,1 @@
-0 0,6,12,18 * * * root /usr/bin/node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs
+*/1 * * * * root DATABASE_URL="postgresql://offsetra:69542068ef65466a1c@db_dashboard:5432/offsetra?schema=public" CARBON_API="http://api:3000" /usr/bin/node --experimental-json-modules /usr/src/carbon-api-dashboard/dashboard/scripts/createNetworkData.mjs >> /var/log/cronjob.log 2>&1
