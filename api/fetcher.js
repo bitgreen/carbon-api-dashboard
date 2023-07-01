@@ -15,6 +15,7 @@ let fetcher_job = new CronJob(
     startLoop
 );
 fetcher_job.start()
+startLoop().then()
 
 let report_job = new CronJob(
     '0 0 * * *', // every midnight
@@ -124,7 +125,7 @@ async function startLoop() {
 
     let promise_call = []
     for(let network of fetch_networks) {
-        if(network.name === 'POLKADOT' || network.name === 'KUSAMA') {
+        if(network.name.toLowerCase() === 'POLKADOT'.toLowerCase() || network.name.toLowerCase() === 'KUSAMA'.toLowerCase()) {
             promise_call.push(getByNetwork(network, 'w3f'))
         }
 
@@ -164,7 +165,7 @@ async function getByNetwork(network, source = 'default') {
         for (const message of messages) {
             // list of all chains
             // avoid checking on every message, do it once every period
-            if(message.action === 11 && network.name === 'POLKADOT' && source !== 'w3f') {
+            if(message.action === 11 && network.name.toLowerCase() === 'POLKADOT'.toLowerCase() && source !== 'w3f') {
                 const [
                     network_name,
                     network_hash

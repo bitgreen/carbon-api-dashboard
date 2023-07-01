@@ -15,9 +15,9 @@ RUN /usr/bin/npm install
 
 # copy necessery files
 COPY .env.Docker /usr/src/carbon-api-dashboard/api/.env
-COPY autostart.prod.sh /usr/src/carbon-api-dashboard/api/autostart.sh
+COPY autostart.dev.sh /usr/src/carbon-api-dashboard/api/autostart.sh
 RUN chmod a+x /usr/src/carbon-api-dashboard/api/autostart.sh
-COPY dump.sql /usr/src/carbon-api-dashboard/api/dump.sql
+COPY prisma/seed.js /usr/src/carbon-api-dashboard/api/prisma/seed.js
 
 # final configuration
 EXPOSE 3000

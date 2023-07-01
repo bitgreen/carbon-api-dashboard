@@ -2,6 +2,28 @@
   "POLKADOT": {
     "hash": "0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3",
     "parachains": {
+      "ALEPH": {
+        "hash": [
+          "0x70255b4d28de0fc4e1a193d7e175ad1ccef431598211c55538f1018651a0344e",
+          "0x21789c1bdb006a5f5aebc8c539f3044600c6ad8c392f24a8f1224c53b9a64fe9",
+          "0x05d5279c52c484cc80396535a316add7d47b1c5b9e0398dd1f584149341460c5"
+        ]
+      },
+      "WESTEND": {
+        "hash": [
+          "0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e",
+          "0x713daf193a6301583ff467be736da27ef0a72711b248927ba413f573d2b38e44",
+          "0x0441383e31d1266a92b4cb2ddd4c2e3661ac476996db7e5844c52433b81fe782"
+        ]
+      },
+      "CREDITCOIN": {
+        "hash": [
+          "0xdd954cbf4000542ef1a15bca509cd89684330bee5e23766c527cdb0d7275e9c2",
+          "0x0d167d9168b0e5a73b53c720429ccc3d6653e9c52695e92282b13b3ea3679717",
+          "0xc2e43792c8acc075e564558f9a2184a0ffe9b0fd573969599eee9b647358c6cf",
+          "0xf5c3b0eff95a1c7c2760148fdb5abc31bf8b7e9bb88b64d5ff0c2ecbf3d2529b"
+        ]
+      },
       "COLLECTIVES": {
         "hash": ""
       },
@@ -50,18 +72,12 @@
       "COMPOSABLE": {
         "hash": "0xdaab8df776eb52ec604a5df5d388bb62a050a0aaec4556a64265b9d42755552d"
       },
-      "CRUST": {
-        "hash": [
-          "0x8b404e7ed8789d813982b9cb4c8b664c05b3fbf433309f603af014ec9ce56a8c",
-          "0xb19e8874eb2013dc100534fafa322e105eea53c0aa02cd17cf94a2df35fbd41f",
-          "0x0e060cc7744159fa1642f61f71ea632a4ba3627f6d54ec2a5d6fc2b1c89fdc0e"
-        ]
-      },
       "DARWINIA": {
         "hash": [
           "0x729cb8f2cf428adcf81fe69610edda32c5711b2ff17de747e8604a3587021db8",
           "0xe71578b37a7c799b0ab4ee87ffa6f059a6b98f71f06fb8c84a8d88013a548ad6",
-          "0x34f61bfda344b3fad3c3e38832a91448b3c613b199eb23e5110a635d71c13c65"
+          "0x34f61bfda344b3fad3c3e38832a91448b3c613b199eb23e5110a635d71c13c65",
+          "0xf0b8924b12e8108550d28870bc03f7b45a947e1b2b9abf81bfb0b89ecb60570e"
         ]
       },
       "EFINITY": {
@@ -85,7 +101,7 @@
         "hash": ""
       },
       "INTERLAY": {
-        "hash": ""
+        "hash": "0xbf88efe70e9e0e916416e8bed61f2b45717f517d7f3523e33c7b001e5ffcbc72"
       },
       "KILT": {
         "hash": ""
@@ -142,7 +158,8 @@
       },
       "BITGREEN": {
         "hash": [
-          "0xa7fccb184338315b4d1565939215a7dabd784f87ff54625f6800d623e443c3b4"
+          "0xa7fccb184338315b4d1565939215a7dabd784f87ff54625f6800d623e443c3b4",
+          "0xc14597baeccb232d662770d2d50ae832ca8c3192693d2b0814e6433f2888ddd6"
         ]
       },
       "OMNIBTC": {
@@ -152,7 +169,7 @@
         "hash": ""
       },
       "ARES": {
-        "hash": ""
+        "hash": "0x0f3665e2e57fb38fd638145b69e567fb05bbadfd457624f90f15e5dbb31320bb"
       },
       "BITCOUNTRYCONTINUUM": {
         "hash": "0xfff6fd94251f570d4c9cdf25a0475da0d7ad35160290da19dad8f9caf8bf31b5"
@@ -197,7 +214,7 @@
         "hash": ""
       },
       "MANTA": {
-        "hash": ""
+        "hash": "0xf3c7ad88f6a80f366c4be216691411ef0622e8b809b1046ea297ef106058d4eb"
       },
       "MATH": {
         "hash": "0xc05a7bae6228fec16454c076a38db66ab74a92b03e51f2c832fec26b22167c06"
@@ -367,7 +384,8 @@
           "0xabf929bb2e7d75083f6f7b5f5ad3dd6ef94cab0c1db12cc1a0a4ddccf76c18a9",
           "0x447ee782b551747c4459045d3843a7254eb1bfd50faf7e3906a61140fb999c29",
           "0x94bdb2ec0f0e57211303a30dcc2314f1cd60435a8f2bf05991a62393ebf9def4",
-          "0x6b9847d615232517b5c2edf9889610557818f97126339b5beff6763eca55c606"
+          "0x6b9847d615232517b5c2edf9889610557818f97126339b5beff6763eca55c606",
+          "0x12028064176a60c6092f08f4e4603949249dc3f1d334075ae5757215578ff29f"
         ]
       },
       "KULUPU": {
@@ -490,7 +508,10 @@
     "hash": "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe",
     "parachains": {
       "STATEMINE": {
-        "hash": "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda771a"
+        "hash": [
+          "0x48239ef607d7928874027a43a67689209727dfb3d3dc5e5b03a39bdc2eda771a",
+          "0x2c15dac2282689101220f5092bd1feadaf70d57760079f7f0ff1b8304bbdef6f"
+        ]
       },
       "ALTAIR": {
         "hash": "0xaa3876c1dc8a1afcc2e9a685a49ff7704cfd36ad8c90bf2702b9d1b00cc40011"
@@ -527,7 +548,11 @@
         "hash": "0xeac895d7768b17837a9c3a9f0280c01502c3ef40193df923490a0fa9c60ea076"
       },
       "CRUST": {
-        "hash": ""
+        "hash": [
+          "0x8b404e7ed8789d813982b9cb4c8b664c05b3fbf433309f603af014ec9ce56a8c",
+          "0xb19e8874eb2013dc100534fafa322e105eea53c0aa02cd17cf94a2df35fbd41f",
+          "0x0e060cc7744159fa1642f61f71ea632a4ba3627f6d54ec2a5d6fc2b1c89fdc0e"
+        ]
       },
       "DAOIPCI": {
         "hash": "0x7372b32137952f3047d30bfe1ffd240bc5e70f7a61d9a0cbf16e910dbb673f84"
@@ -629,7 +654,8 @@
       "SUBSOCIAL": {
         "hash": [
           "0x0bd72c1c305172e1275278aaeb3f161e02eccb7a819e63f62d47bd53a28189f8",
-          "0xacb8cd9640561d5f740150622ac51429e67e18aad3abf695296e26afde841a81"
+          "0xacb8cd9640561d5f740150622ac51429e67e18aad3abf695296e26afde841a81",
+          "0x4a12be580bb959937a1c7a61d5cf24428ed67fa571974b4007645d1886e7c89f"
         ]
       },
       "TANGANIKA": {
@@ -639,7 +665,7 @@
         ]
       },
       "TINKERNET": {
-        "hash": ""
+        "hash": "0xba1d9ef8afeee7a1cab58ebd6fa2243cfda3db636504c3d29a0d808169cdf8e4"
       },
       "TURING": {
         "hash": [
@@ -704,6 +730,9 @@
       },
       "MOMENTUM": {
         "hash": ""
+      },
+      "BRIDGEHUB": {
+        "hash": "0x00dcb981df86429de8bbacf9803401f09485366c44efbf53af9ecfab03adc7e5"
       }
     }
   }
