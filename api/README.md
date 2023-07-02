@@ -40,10 +40,6 @@ Install docker and docker composer from [https://www.docker.com](https://www.doc
 ### Build and Run  
 from the project folder execute:  
 ```
-# for development (the db will be wiped and some seed data will be loaded):   
-./setup-dev.sh  
-# for production: (the db is not loaded with seed data, please wait for a while to populate some records)  
-./setup-prod.sh
 # run docker in detached mode
 docker compose up -d
 ```

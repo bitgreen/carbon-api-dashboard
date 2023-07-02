@@ -45,17 +45,20 @@ Execute the install.sh:
 For any issue the docker certbot will outout clear error messages and possible solutions.
 run the docker image for the reverse proxy with:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 The reverse proxy will forward the TLS connections the internal API and Dashboard.  
 You should run the docker for the Dashboard and API and test them browsing to:  
 https;//YOURDOMAIN/ for the dashboard.  
 https://YOURDOMAIN/api for the api.  
 
-To run all the docker images:  
+To run all the docker images in production, first make sure you have db dumps for both api and dashboard projects.
+They should be located at 
 ```bash
 ./start-all.sh
 ```
 
-
-
+To run all the docker images in development:
+```bash
+./start-all.dev.sh
+```

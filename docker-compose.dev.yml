@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  dashboard:
+    build:
+      context: dashboard
+      dockerfile: dev.Dockerfile
+
+  api:
+    build:
+      context: api
+      dockerfile: dev.Dockerfile
+
+  cron:
+    build:
+      context: dashboard
+      dockerfile: cron.dev.Dockerfile

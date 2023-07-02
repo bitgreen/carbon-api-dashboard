@@ -1,5 +1,5 @@
 #!/bin/bash
 cd revproxy
-docker-compose up -d
+docker compose up -d
 cd ..
-docker-compose up -d --build
+docker compose -f docker-compose.yml up -d --build

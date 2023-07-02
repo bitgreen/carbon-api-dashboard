@@ -18,7 +18,7 @@ services:
       
   web: 
     build: .
-    command: ["./autostart.prod.sh"]
+    command: ["./autostart.sh"]
     restart: always
     ports: 
     - 3000:3000

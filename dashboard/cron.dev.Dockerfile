@@ -12,6 +12,6 @@ WORKDIR /usr/src/carbon-api-dashboard/dashboard
 COPY scripts /usr/src/carbon-api-dashboard/dashboard/scripts
 
 # setup cronjob
-COPY prod.cronjob /etc/cron.d/cronjob
+COPY dev.cronjob /etc/cron.d/cronjob
 RUN chmod 0644 /etc/cron.d/cronjob
 RUN touch /var/log/cronjob.log
