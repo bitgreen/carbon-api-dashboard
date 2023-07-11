@@ -52,13 +52,24 @@ You should run the docker for the Dashboard and API and test them browsing to:
 https;//YOURDOMAIN/ for the dashboard.  
 https://YOURDOMAIN/api for the api.  
 
+# Production Run
 To run all the docker images in production, first make sure you have db dumps for both api and dashboard projects.
-They should be located at 
+They should be located at `api/dump.sql` and `dashboard/dump.sql`. Once you have dumps at correct paths, you can safely run the following command:
 ```bash
 ./start-all.sh
 ```
 
+# Development Run
 To run all the docker images in development:
 ```bash
 ./start-all.dev.sh
+```
+### Notes:
+- It takes about 5 minutes to get everything up and running, so please wait a bit once you run the command.
+- In dev environment, cron job will run every 2 minutes (every 6h in production)
+
+## Prune Docker files
+In case you want to prune all containers and it's data, you can run the following script:
+```bash
+./prune-docker.sh
 ```

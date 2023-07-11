@@ -30,8 +30,8 @@ const load = async () => {
         })
         console.log('Added Network data')
     } catch (e) {
-        console.error(e)
-        process.exit(1)
+        // console.error(e)
+        // process.exit(1)
     } finally {
         await prisma.$disconnect()
     }
