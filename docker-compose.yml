@@ -10,7 +10,7 @@ services:
     environment:
       PGPASSWORD: 69542068ef65466a1c
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     volumes:
       - dashboard-volume:/usr/src/carbon-api-dashboard/dashboard
     depends_on:
@@ -37,7 +37,7 @@ services:
       POSTGRES_USER: offsetra
       POSTGRES_DB: offsetra
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "offsetra"]
       interval: 10s
@@ -55,7 +55,7 @@ services:
     environment:
       PGPASSWORD: 69542068ef65466a1c
     ports:
-      - "3001:3000"
+      - "127.0.0.1:3001:3000"
     depends_on:
       - db_api
 
@@ -67,7 +67,7 @@ services:
       POSTGRES_USER: carbonapi
       POSTGRES_DB: carbonapi
     ports:
-      - "5433:5432"
+      - "127.0.0.1:5433:5432"
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "carbonapi" ]
       interval: 10s

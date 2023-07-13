@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: carbonapi
       POSTGRES_DB: carbonapi
     ports: 
-     - 5431:5432
+     - 127.0.0.1:5431:5432
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "carbonapi"]
       interval: 10s
@@ -21,7 +21,7 @@ services:
      command: ["./autostart.sh"]
      restart: always
      ports: 
-      - 3001:3000
+      - 127.0.0.1:3001:3000
      depends_on:
         - db
     
