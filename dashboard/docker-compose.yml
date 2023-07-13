@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: offsetra
       POSTGRES_DB: offsetra
     ports: 
-    - 5433:5432
+    - 127.0.0.1:5433:5432
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "offsetra"]
       interval: 10s
@@ -21,7 +21,7 @@ services:
     command: ["./autostart.sh"]
     restart: always
     ports: 
-    - 3000:3000
+    - 127.0.0.1:3000:3000
     depends_on:
       - db
     extra_hosts:
