@@ -6,9 +6,9 @@ services:
       context: dashboard
       dockerfile: Dockerfile
     command: ["./autostart.sh"]
+    env_file:
+      - dashboard/.env.Docker
     restart: always
-    environment:
-      PGPASSWORD: 69542068ef65466a1c
     ports:
       - "127.0.0.1:3000:3000"
     volumes:
@@ -22,6 +22,8 @@ services:
       context: dashboard
       dockerfile: cron.Dockerfile
     command: ["cron", "-f"]
+    env_file:
+      - dashboard/.env.Docker
     volumes:
       - dashboard-volume:/usr/src/carbon-api-dashboard/dashboard
     depends_on:
@@ -31,11 +33,9 @@ services:
 
   db_dashboard:
     image: postgres
+    env_file:
+      - dashboard/.env.Docker
     restart: always
-    environment:
-      POSTGRES_PASSWORD: 69542068ef65466a1c
-      POSTGRES_USER: offsetra
-      POSTGRES_DB: offsetra
     ports:
       - "127.0.0.1:5432:5432"
     healthcheck:
@@ -51,9 +51,9 @@ services:
       context: api
       dockerfile: Dockerfile
     command: ["./autostart.sh"]
+    env_file:
+      - api/.env.Docker
     restart: always
-    environment:
-      PGPASSWORD: 69542068ef65466a1c
     ports:
       - "127.0.0.1:3001:3000"
     depends_on:
@@ -61,11 +61,9 @@ services:
 
   db_api:
     image: postgres
+    env_file:
+      - api/.env.Docker
     restart: always
-    environment:
-      POSTGRES_PASSWORD: 69542068ef65466a1c
-      POSTGRES_USER: carbonapi
-      POSTGRES_DB: carbonapi
     ports:
       - "127.0.0.1:5433:5432"
     healthcheck:
