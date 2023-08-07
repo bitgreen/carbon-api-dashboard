@@ -11,7 +11,7 @@ RUN apt-get install -y nodejs cron git coreutils postgresql-client
 WORKDIR /usr/src/carbon-api-dashboard/dashboard
 COPY scripts /usr/src/carbon-api-dashboard/dashboard/scripts
 
-COPY startcron.prod.sh /usr/src/carbon-api-dashboard/dashboard/startcron.sh
+COPY startcron.dev.sh /usr/src/carbon-api-dashboard/dashboard/startcron.sh
 RUN chmod a+x /usr/src/carbon-api-dashboard/dashboard/startcron.sh
 
 # setup cronjob
