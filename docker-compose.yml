@@ -21,7 +21,7 @@ services:
     build:
       context: dashboard
       dockerfile: cron.Dockerfile
-    command: ["cron", "-f"]
+    command: ["./startcron.prod.sh"]
     env_file:
       - dashboard/.env.Docker
     volumes:
@@ -39,7 +39,7 @@ services:
     ports:
       - "127.0.0.1:5432:5432"
     healthcheck:
-      test: ["CMD", "pg_isready"]
+      test: ["CMD", "pg_isready", "-U", "offsetra"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -67,7 +67,7 @@ services:
     ports:
       - "127.0.0.1:5433:5432"
     healthcheck:
-      test: ["CMD", "pg_isready"]
+      test: ["CMD", "pg_isready", "-U", "carbonapi"]
       interval: 10s
       timeout: 5s
       retries: 5
