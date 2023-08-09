@@ -171,21 +171,23 @@ async function getByNetwork(network, source = 'default') {
                     network_hash
                 ] = message.payload
 
-                try {
-                    await prisma.Network.upsert({
-                        where: {
-                            hash: network_hash
-                        },
-                        update: {
-                            name: network_name
-                        },
-                        create: {
-                            name: network_name,
-                            hash: network_hash
-                        }
-                    })
-                } catch (e) {
-                    console.log('error saving network')
+                const existing_network = await prisma.Network.findFirst({
+                    where: {
+                        name: network_name
+                    }
+                })
+
+                if(!existing_network) {
+                    try {
+                        await prisma.Network.create({
+                            data: {
+                                name: network_name,
+                                hash: network_hash
+                            }
+                        })
+                    } catch (e) {
+                        console.log('error saving network')
+                    }
                 }
             }
 
@@ -215,7 +217,7 @@ async function getByNetwork(network, source = 'default') {
                 }
 
                 try {
-                    const node = await prisma.Node.upsert({
+                    let node = await prisma.Node.findFirst({
                         where: {
                             uniqueId: {
                                 name: name,
@@ -224,36 +226,57 @@ async function getByNetwork(network, source = 'default') {
                                 latitude: latitude,
                                 longitude: longitude
                             }
-                        },
-                        update: {
-                            periodLastSeenId: period.id,
-                            type: type
-                        },
-                        create: {
-                            name: name,
-                            type: type,
-                            networkId: network.id,
-                            latitude: latitude,
-                            longitude: longitude,
-                            city: city,
-                            periodFirstSeenId: period.id,
-                            periodLastSeenId: period.id
-                        },
+                        }
                     })
 
-                    const node_on_period = await prisma.NodesOnPeriods.upsert({
+                    if(node) {
+                        node = await prisma.Node.update({
+                            where: {
+                                uniqueId: {
+                                    name: name,
+                                    type: type,
+                                    networkId: network.id,
+                                    latitude: latitude,
+                                    longitude: longitude
+                                }
+                            },
+                            data: {
+                                periodLastSeenId: period.id,
+                                type: type
+                            }
+                        })
+                    } else {
+                        node = await prisma.Node.create({
+                            data: {
+                                name: name,
+                                type: type,
+                                networkId: network.id,
+                                latitude: latitude,
+                                longitude: longitude,
+                                city: city,
+                                periodFirstSeenId: period.id,
+                                periodLastSeenId: period.id
+                            },
+                        })
+                    }
+
+                    const existing_node_on_period = await prisma.NodesOnPeriods.findFirst({
                         where: {
                             uniqueId: {
                                 periodId: period.id,
                                 nodeId: node.id
                             }
                         },
-                        update: {},
-                        create: {
-                            nodeId: node.id,
-                            periodId: period.id
-                        }
-                    });
+                    })
+
+                    if(!existing_node_on_period) {
+                        const node_on_period = await prisma.NodesOnPeriods.create({
+                            data: {
+                                nodeId: node.id,
+                                periodId: period.id
+                            }
+                        });
+                    }
                 } catch (e) {
                     console.log('error saving node')
                 }
