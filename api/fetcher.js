@@ -173,7 +173,10 @@ async function getByNetwork(network, source = 'default') {
 
                 const existing_network = await prisma.Network.findFirst({
                     where: {
-                        name: network_name
+                        OR: [
+                            { name: network_name },
+                            { hash: network_hash }
+                        ]
                     }
                 })
 
