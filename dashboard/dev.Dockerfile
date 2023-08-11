@@ -18,5 +18,8 @@ COPY .env.Docker /usr/src/carbon-api-dashboard/dashboard/.env
 COPY autostart.dev.sh /usr/src/carbon-api-dashboard/dashboard/autostart.sh
 RUN chmod a+x /usr/src/carbon-api-dashboard/dashboard/autostart.sh
 
+COPY startcron.dev.sh /usr/src/carbon-api-dashboard/dashboard/startcron.sh
+RUN chmod a+x /usr/src/carbon-api-dashboard/dashboard/startcron.sh
+
 # final configuration
 EXPOSE 3000

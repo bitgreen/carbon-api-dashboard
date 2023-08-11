@@ -15,4 +15,3 @@ services:
     build:
       context: dashboard
       dockerfile: cron.dev.Dockerfile
-    command: ["./startcron.dev.sh"]

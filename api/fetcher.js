@@ -103,19 +103,21 @@ async function startLoop() {
     period_start_time = new Date(Math.round(period_start_time.getTime() / (1000 * 60 * 30)) * (1000 * 60 * 30)) // round it to the nearest minute
     period_end_time = new Date(period_start_time.getTime() + 1000 * 60 * 30)
 
-    period = await prisma.Period.upsert({
+    period = await prisma.Period.findFirst({
         where: {
-            uniqueId: {
-                start: period_start_time.toISOString(),
-                end: period_end_time.toISOString()
-            }
-        },
-        update: {},
-        create: {
             start: period_start_time.toISOString(),
-            end: period_end_time.toISOString(),
+            end: period_end_time.toISOString()
         }
     })
+
+    if(!period) {
+        period = await prisma.Period.create({
+            data: {
+                start: period_start_time.toISOString(),
+                end: period_end_time.toISOString(),
+            }
+        })
+    }
 
     const fetch_networks = await prisma.Network.findMany({
         include: {
@@ -180,7 +182,7 @@ async function getByNetwork(network, source = 'default') {
                     }
                 })
 
-                if(!existing_network) {
+                if(existing_network === null) {
                     try {
                         await prisma.Network.create({
                             data: {
@@ -222,13 +224,11 @@ async function getByNetwork(network, source = 'default') {
                 try {
                     let node = await prisma.Node.findFirst({
                         where: {
-                            uniqueId: {
-                                name: name,
-                                type: type,
-                                networkId: network.id,
-                                latitude: latitude,
-                                longitude: longitude
-                            }
+                            name: name,
+                            type: type,
+                            networkId: network.id,
+                            latitude: latitude,
+                            longitude: longitude
                         }
                     })
 
@@ -265,15 +265,13 @@ async function getByNetwork(network, source = 'default') {
 
                     const existing_node_on_period = await prisma.NodesOnPeriods.findFirst({
                         where: {
-                            uniqueId: {
-                                periodId: period.id,
-                                nodeId: node.id
-                            }
-                        },
+                            nodeId: node.id,
+                            periodId: period.id
+                        }
                     })
 
-                    if(!existing_node_on_period) {
-                        const node_on_period = await prisma.NodesOnPeriods.create({
+                    if(existing_node_on_period === null) {
+                        await prisma.NodesOnPeriods.create({
                             data: {
                                 nodeId: node.id,
                                 periodId: period.id

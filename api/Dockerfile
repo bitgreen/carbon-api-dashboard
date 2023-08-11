@@ -17,7 +17,7 @@ RUN /usr/bin/npm install
 COPY .env.Docker /usr/src/carbon-api-dashboard/api/.env
 COPY autostart.prod.sh /usr/src/carbon-api-dashboard/api/autostart.sh
 RUN chmod a+x /usr/src/carbon-api-dashboard/api/autostart.sh
-COPY dump.sql /usr/src/carbon-api-dashboard/api/dump.sql
+COPY fetcher.js /usr/src/carbon-api-dashboard/api/fetcher.js
 
 # final configuration
 EXPOSE 3000

@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     command: ["./autostart.sh"]
     env_file:
-      - dashboard/.env.Docker
+      - ./dashboard/.env.Docker
     restart: always
     ports:
       - "127.0.0.1:3000:3000"
@@ -21,9 +21,9 @@ services:
     build:
       context: dashboard
       dockerfile: cron.Dockerfile
-    command: ["./startcron.prod.sh"]
+    command: ["./startcron.sh"]
     env_file:
-      - dashboard/.env.Docker
+      - ./dashboard/.env.Docker
     volumes:
       - dashboard-volume:/usr/src/carbon-api-dashboard/dashboard
     depends_on:
@@ -34,16 +34,18 @@ services:
   db_dashboard:
     image: postgres
     env_file:
-      - dashboard/.env.Docker
+      - ./dashboard/.env.Docker
     restart: always
     ports:
       - "127.0.0.1:5432:5432"
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "offsetra"]
+      test: ["CMD", "pg_isready", '-U', 'postgres']
       interval: 10s
       timeout: 5s
       retries: 5
     volumes:
+      - ./init-postgres-user.sh:/docker-entrypoint-initdb.d/01-init-postgres-user.sh
+      - ./dashboard/dump.sql:/docker-entrypoint-initdb.d/02-dump.sql
       - db-dashboard-volume:/var/lib/postgresql/data
 
   api:
@@ -52,7 +54,7 @@ services:
       dockerfile: Dockerfile
     command: ["./autostart.sh"]
     env_file:
-      - api/.env.Docker
+      - ./api/.env.Docker
     restart: always
     ports:
       - "127.0.0.1:3001:3000"
@@ -62,16 +64,18 @@ services:
   db_api:
     image: postgres
     env_file:
-      - api/.env.Docker
+      - ./api/.env.Docker
     restart: always
     ports:
       - "127.0.0.1:5433:5432"
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "carbonapi"]
+      test: ["CMD", "pg_isready", '-U', 'postgres']
       interval: 10s
       timeout: 5s
       retries: 5
     volumes:
+      - ./init-postgres-user.sh:/docker-entrypoint-initdb.d/01-init-postgres-user.sh
+      - ./api/dump.sql:/docker-entrypoint-initdb.d/02-dump.sql
       - db-api-volume:/var/lib/postgresql/data
 
 volumes:
