@@ -138,172 +138,186 @@ async function startLoop() {
 }
 
 async function getByNetwork(network, source = 'default') {
-    let ws = null
-    if(source === 'w3f') {
-        ws = new WebSocket('wss://telemetry-backend.w3f.community/feed')
-    } else {
-        ws = new WebSocket('wss://feed.telemetry.polkadot.io/feed')
-    }
-
-    if(!ws) {
-        console.log('Source not found.')
-        return false;
-    }
-
-    ws.on('open', function() {
-        ws.send('subscribe:' + network.hash)
-    });
-
-    ws.on('message', async function(data, flags) {
-        let utf8decoder = new TextDecoder('utf-8')
-
-        data = utf8decoder.decode(data)
-        let messages = deserialize(data)
-
-        if(messages.length > 20) {
-            // return
+    try {
+        let ws = null
+        if (source === 'w3f') {
+            ws = new WebSocket('wss://telemetry-backend.w3f.community/feed')
+        } else {
+            ws = new WebSocket('wss://feed.telemetry.polkadot.io/feed')
         }
 
-        for (const message of messages) {
-            // list of all chains
-            // avoid checking on every message, do it once every period
-            if(message.action === 11 && network.name.toLowerCase() === 'POLKADOT'.toLowerCase() && source !== 'w3f') {
-                const [
-                    network_name,
-                    network_hash
-                ] = message.payload
+        if (!ws) {
+            console.log('Source not found.')
+            return false;
+        }
 
-                const existing_network = await prisma.Network.findFirst({
-                    where: {
-                        OR: [
-                            { name: network_name },
-                            { hash: network_hash }
-                        ]
-                    }
-                })
+        ws.on('open', function () {
+            ws.send('subscribe:' + network.hash)
+        });
 
-                if(existing_network === null) {
-                    try {
-                        await prisma.Network.create({
-                            data: {
-                                name: network_name,
-                                hash: network_hash
-                            }
-                        })
-                    } catch (e) {
-                        console.log('error saving network')
-                    }
-                }
+        ws.on('error', function (error) {
+            console.error('WebSocket encountered an error:', error);
+            ws.close();
+
+            setTimeout(function () {
+                console.log('Reconnecting...');
+                getByNetwork(network, source); // Recursion to create a new connection
+            }, 10000); // Reconnect after 10 seconds
+        });
+
+        ws.on('message', async function (data, flags) {
+            let utf8decoder = new TextDecoder('utf-8')
+
+            data = utf8decoder.decode(data)
+            let messages = deserialize(data)
+
+            if (messages.length > 20) {
+                // return
             }
 
-            // AddedNode
-            if(message.action === 3) {
-                const [
-                    id,
-                    nodeDetails,
-                    nodeStats,
-                    nodeIO,
-                    nodeHardware,
-                    blockDetails,
-                    location,
-                    startupTime,
-                ] = message.payload;
+            for (const message of messages) {
+                // list of all chains
+                // avoid checking on every message, do it once every period
+                if (message.action === 11 && network.name.toLowerCase() === 'POLKADOT'.toLowerCase() && source !== 'w3f') {
+                    const [
+                        network_name,
+                        network_hash
+                    ] = message.payload
 
-                const name = nodeDetails[0].trim()
-                const validator = nodeDetails[3] // validator address
-                const network_id = nodeDetails[4]
-                const latitude = location && location[0] ? parseFloat(location[0]) : 0.00
-                const longitude = location && location[1] ? parseFloat(location[1]) : 0.00
-                const city = location && location[2] ? location[2] : ''
-
-                let type = 'Node'
-                if(validator) {
-                    type = 'Validator'
-                }
-
-                try {
-                    let node = await prisma.Node.findFirst({
+                    const existing_network = await prisma.Network.findFirst({
                         where: {
-                            name: name,
-                            type: type,
-                            networkId: network.id,
-                            latitude: latitude,
-                            longitude: longitude
+                            OR: [
+                                {name: network_name},
+                                {hash: network_hash}
+                            ]
                         }
                     })
 
-                    if(node) {
-                        node = await prisma.Node.update({
-                            where: {
-                                uniqueId: {
-                                    name: name,
-                                    type: type,
-                                    networkId: network.id,
-                                    latitude: latitude,
-                                    longitude: longitude
+                    if (existing_network === null) {
+                        try {
+                            await prisma.Network.create({
+                                data: {
+                                    name: network_name,
+                                    hash: network_hash
                                 }
-                            },
-                            data: {
-                                periodLastSeenId: period.id,
-                                type: type
-                            }
-                        })
-                    } else {
-                        node = await prisma.Node.create({
-                            data: {
+                            })
+                        } catch (e) {
+                            console.log('error saving network')
+                        }
+                    }
+                }
+
+                // AddedNode
+                if (message.action === 3) {
+                    const [
+                        id,
+                        nodeDetails,
+                        nodeStats,
+                        nodeIO,
+                        nodeHardware,
+                        blockDetails,
+                        location,
+                        startupTime,
+                    ] = message.payload;
+
+                    const name = nodeDetails[0].trim()
+                    const validator = nodeDetails[3] // validator address
+                    const network_id = nodeDetails[4]
+                    const latitude = location && location[0] ? parseFloat(location[0]) : 0.00
+                    const longitude = location && location[1] ? parseFloat(location[1]) : 0.00
+                    const city = location && location[2] ? location[2] : ''
+
+                    let type = 'Node'
+                    if (validator) {
+                        type = 'Validator'
+                    }
+
+                    try {
+                        let node = await prisma.Node.findFirst({
+                            where: {
                                 name: name,
                                 type: type,
                                 networkId: network.id,
                                 latitude: latitude,
-                                longitude: longitude,
-                                city: city,
-                                periodFirstSeenId: period.id,
-                                periodLastSeenId: period.id
-                            },
+                                longitude: longitude
+                            }
                         })
-                    }
 
-                    const existing_node_on_period = await prisma.NodesOnPeriods.findFirst({
-                        where: {
-                            nodeId: node.id,
-                            periodId: period.id
+                        if (node) {
+                            node = await prisma.Node.update({
+                                where: {
+                                    uniqueId: {
+                                        name: name,
+                                        type: type,
+                                        networkId: network.id,
+                                        latitude: latitude,
+                                        longitude: longitude
+                                    }
+                                },
+                                data: {
+                                    periodLastSeenId: period.id,
+                                    type: type
+                                }
+                            })
+                        } else {
+                            node = await prisma.Node.create({
+                                data: {
+                                    name: name,
+                                    type: type,
+                                    networkId: network.id,
+                                    latitude: latitude,
+                                    longitude: longitude,
+                                    city: city,
+                                    periodFirstSeenId: period.id,
+                                    periodLastSeenId: period.id
+                                },
+                            })
                         }
-                    })
 
-                    if(existing_node_on_period === null) {
-                        await prisma.NodesOnPeriods.create({
-                            data: {
+                        const existing_node_on_period = await prisma.NodesOnPeriods.findFirst({
+                            where: {
                                 nodeId: node.id,
                                 periodId: period.id
                             }
-                        });
+                        })
+
+                        if (existing_node_on_period === null) {
+                            await prisma.NodesOnPeriods.create({
+                                data: {
+                                    nodeId: node.id,
+                                    periodId: period.id
+                                }
+                            });
+                        }
+                    } catch (e) {
+                        console.log('error saving node')
                     }
-                } catch (e) {
-                    console.log('error saving node')
+                }
+
+                // RemovedNode
+                if (message.action === 4) {
+                    const id = message.payload;
+                }
+
+                // SubscribedTo
+                if (message.action === 13 && source !== 'w3f') {
+                    console.log('subscribed to ' + network.name + (network.parentNetwork ? ' - ' + network.parentNetwork.name : '') + ': ' + message.payload)
+                }
+
+                // UnsubscribedFrom
+                if (message.action === 14) {
+                    // finalize()
+                    console.log('unsubscribed from ' + message.payload)
                 }
             }
+        });
 
-            // RemovedNode
-            if(message.action === 4) {
-                const id = message.payload;
-            }
-
-            // SubscribedTo
-            if(message.action === 13 && source !== 'w3f') {
-                console.log('subscribed to ' +  network.name + (network.parentNetwork ? ' - ' + network.parentNetwork.name : '') + ': ' + message.payload)
-            }
-
-            // UnsubscribedFrom
-            if(message.action === 14) {
-                // finalize()
-                console.log('unsubscribed from ' + message.payload)
-            }
-        }
-    });
-
-    setTimeout(function() {
-        ws.close()
-    }, 60 * 1000 * 30)
+        setTimeout(function () {
+            ws.close()
+        }, 60 * 1000 * 30)
+    } catch (e) {
+        console.log('Error occurred: ', e)
+    }
 }
 
 function deserialize(data) {
